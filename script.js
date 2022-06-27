@@ -6,19 +6,14 @@ function writePassword() {
 
   // all the prompts to record the desired properties of the password for the user.
   length = prompt("Please type your desired password length (8-128 characters limit).");
-  console.log(length);
 
   uppercasing = window.confirm("Would you like to include uppercase letters in your password? Click 'OK' for YES, or 'Cancel' for NO.");
-  console.log(uppercasing);
 
   lowercasing = window.confirm("Would you like to include lowercase letters in your password? Click 'OK' for YES, or 'Cancel' for NO.");
-  console.log(lowercasing);
 
   numbers = window.confirm("Would you like to include numbers in your password? Click 'OK' for YES, or 'Cancel' for NO.");
-  console.log(numbers);
 
   special = window.confirm("Would you like to include special characters '!,@,#,$,%,^,&,*) in your password? Click 'OK' for YES, or 'Cancel' for NO.");
-  console.log(special);
 
   var password = generatePassword(length, uppercasing, lowercasing, numbers, special);
   var passwordText = document.querySelector("#password");
