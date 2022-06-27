@@ -32,6 +32,13 @@ function generatePassword(length, uppercasing, lowercasing, numbers, special) {
   var characters = [];
   //string to store the randomly generated characters into
   var emptyPassword = ""
+
+//if statement to ensure the user chooses from 8-128 characters, will give undefined in box.
+  if (length < 8 || length > 128) {
+    window.alert("ERROR: Please choose a password length from 8 to 128 characters only please. Please try again.");
+    return;
+  }
+
  //based on the user responses to the prompts, we will add to our array that we can randomly select from
   if (uppercasing === true) {
     characters.push("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
