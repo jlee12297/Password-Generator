@@ -17,7 +17,6 @@ function writePassword() {
 
   var password = generatePassword(length, uppercasing, lowercasing, numbers, special);
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password
 }
 
